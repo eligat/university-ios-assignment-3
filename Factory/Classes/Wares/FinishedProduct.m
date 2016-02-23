@@ -25,22 +25,12 @@
 {
     self = [super init];
     if (self) {
-        [rawMaterials_ release];
         rawMaterials_ = [rawMaterials copy];
     }
 
     return self;
 }
 
-#pragma mark - Deallocation
-
-- (void)dealloc
-{
-    [rawMaterials_ release];
-    rawMaterials_ = nil;
-
-    [super dealloc];
-}
 
 #pragma mark - WareProtocol implementation
 
